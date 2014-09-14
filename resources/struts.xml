@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true" /> 
+    <constant name="struts.objectFactory" value="org.apache.struts2.spring.StrutsSpringObjectFactory" />
+
+     <package name="default" namespace="/" extends="struts-default">
+          <action name="addCustomerAction" class="customerAction" method="addCustomer">
+                <result name="success">customer.jsp</result>
+          </action>
+          
+          <action name="listCustomerAction" class="customerAction" method="listCustomer">
+                <result name="success">customer.jsp</result>
+          </action>
+          
+     </package>
+
+</struts>
+
+
